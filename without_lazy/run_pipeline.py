@@ -28,7 +28,7 @@ def main():
     # Replace 'your_raw_data.csv' with the path to your actual data file.
     # For demonstration, we'll create a sample DataFrame with various issues.
     # Using 'Financials.csv' to match the user's context.
-    df_raw = pd.read_csv(r'C:\Users\VENKAT\Desktop\Backup\ML_Agent - Copy - Copy - Copy - Copy\Datasets\Financials.csv')
+    df_raw = pd.read_csv(r'C:\Users\prabh\OneDrive\desktop\AML\without_lazy\Datasets\bank_data.csv')
 
     print("\n--- 🚀 Starting Data Cleaning Pipeline with Sample DataFrame ---")
     print("Initial Raw DataFrame:")
