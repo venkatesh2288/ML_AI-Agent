@@ -33,7 +33,7 @@ def select_target_variable(df: pd.DataFrame) -> str:
         except (ValueError, IndexError):
             print(" Invalid input. Please enter a valid number corresponding to a column.")
 
-def run_automl_experiment(df: pd.DataFrame):
+def run_automl_experiment(df: pd.DataFrame, target_column: str):
     """
     Runs an AutoML experiment with Context Tree + Genetic Algorithm feature selection.
 
@@ -56,7 +56,9 @@ def run_automl_experiment(df: pd.DataFrame):
     # Work on a copy to avoid modifying the original DataFrame passed to the function
     df_processed = df.copy()
 
-    target_column = select_target_variable(df_processed)
+    # target_column = select_target_variable(df_processed)
+    print(f"\nTarget variable '{target_column}' was selected in the UI.")
+
 
     # --- Prepare data for modeling ---
     # Drop rows where the target variable is NaN, as it cannot be used for training/evaluation
